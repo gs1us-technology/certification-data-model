@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "gs1x": "https://gs1.org/voc/x/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gs1": "https://gs1.org/voc/",
+    "type": {
+      "@id": "https://schema.org/type",
+      "@type": "@id"
+    },
+    "products": {
+      "@id": "gs1x:products",
+      "@type": "gs1:Product",
+      "@container": "@set"
+    },
+    "issuer": {
+      "@id": "gs1x:issuer",
+      "@type": "Text"
+    },
+    "issueDate": {
+      "@id": "gs1x:issueDate",
+      "@type": "xsd:dateTime"
+    },
+    "schema": "https://schema.org/",
+    "certificationInfo": {
+      "@id": "gs1:certificationDetails",
+      "@type": "@id"
+    },
+    "id": {
+      "@id": "schema:identifier",
+      "@type": "@id"
+    },
+    "agency": "gs1:certificationAgency",
+    "endDate": {
+      "@id": "gs1:certificationEndDate",
+      "@type": "schema:Date"
+    },
+    "standard": "gs1:certificationStandard",
+    "status": "gs1:certificationStatus",
+    "value": "gs1:certificationValue",
+    "targetCountries": {
+      "@id": "gs1:targetCountry",
+      "@container": "@set"
+    },
+    "countryCode": "schema:countryCode",
+    "gtin": {
+      "@id": "gs1:gtin",
+      "@type": "gs1:gtin"
+    },
+    "description": {
+      "@id": "gs1:productDescription",
+      "@type": "schema:Text"
+    }
+  }
+}

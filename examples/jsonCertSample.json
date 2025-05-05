@@ -1,0 +1,72 @@
+
+{
+    "@context": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/cert_context.json?token=GHSAT0AAAAAACNSGJ6BZFJGIQAOMR6TR776ZYWWBOA",
+    "$schema": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/cert_schema.yaml?token=GHSAT0AAAAAACNSGJ6AFAPZCEOR6YOKTXY2ZYWWBBQ",
+    "id": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/examples/jsonCertSample.json?token=GHSAT0AAAAAACNSGJ6AHBT6EJ5LW4B3MNXUZYWU7PQ",
+    "type": "CertificationReport",
+    "issueDate": "2024-10-21T12:00:00Z",
+    "issuer": "Paul",
+    "products" :
+    [
+        {
+            "id": "https://id.gs1.org/01/00123456789128",
+            "type": "Product",
+            "gtin": "00123456789128",
+            "description": "Brand Product Description for Product ABC",
+            "certificationInfo": {
+                "id": "http://www.example.com/certid=2342342",
+                "type": "CertificationDetails",
+                "agency": "Certification Program Name",
+                "endDate":"2025-10-21",
+                "standard": "Certificate Program Specific Standard",
+                "status": "ACTIVE",
+                "value": "gold",
+                "targetCountries": [
+                    {
+                        "type": "Country",
+                        "countryCode": "US"
+                    },
+                    {
+                        "type": "Country",
+                        "countryCode": "CA"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "https://id.gs1.org/01/00123456789129",
+            "type": "Product",
+            "description": "Brand Product Description for Product 123",
+            "gtin": "00123456789129",
+            "certificationInfo":
+            [
+                {
+                    "id": "http://www.example.com/certid=342543523523452345",
+                    "type": "CertificationDetails",
+                    "agency": "Certification Program Name",
+                    "endDate":"2025-10-21",
+                    "standard": "Certificate Program Specific Standard",
+                    "status": "ACTIVE",
+                    "value": "gold",
+                    "targetCountries": {
+                        "type": "Country",
+                        "countryCode": "US"
+                    }
+                },
+                {
+                    "id": "http://www.example.com/certid=7897078908",
+                    "type": "CertificationDetails",
+                    "agency": "Certification Program Name",
+                    "endDate":"2025-10-21",
+                    "standard": "Certificate Program Specific Standard",
+                    "status": "ACTIVE",
+                    "value": "silver",
+                    "targetCountries": {
+                        "type": "Country",
+                        "countryCode": "CA"
+                    }
+                }
+            ]
+        }
+    ]
+}

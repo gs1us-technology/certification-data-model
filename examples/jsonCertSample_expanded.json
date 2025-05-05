@@ -1,0 +1,71 @@
+{
+  "https://schema.org/identifier": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/examples/jsonCertSample.json?token=GHSAT0AAAAAACNSGJ6AHBT6EJ5LW4B3MNXUZYWU7PQ",
+  "https://schema.org/type": "https://gs1.org/voc/x/CertificationReport",
+  "https://gs1.org/voc/x/issueDate": "2024-10-21T12:00:00Z",
+  "https://gs1.org/voc/x/issuer": "Paul",
+  "https://gs1.org/voc/x/products": [
+    {
+      "https://schema.org/identifier": "https://id.gs1.org/01/00123456789128",
+      "https://schema.org/type": "https://gs1.org/voc/Product",
+      "https://gs1.org/voc/gtin": "00123456789128",
+      "https://gs1.org/voc/productDescription": "Brand Product Description for Product ABC",
+      "https://gs1.org/voc/certificationDetails": {
+        "https://schema.org/identifier": "http://www.example.com/certid=2342342",
+        "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
+        "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+        "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+        "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
+        "https://gs1.org/voc/certificationStatus": "ACTIVE",
+        "https://gs1.org/voc/certificationValue": "gold",
+        "https://gs1.org/voc/targetCountry": [
+          {
+            "https://schema.org/type": "https://schema.org/Country",
+            "https://schema.org/countryCode": "US"
+          },
+          {
+            "https://schema.org/type": "https://schema.org/Country",
+            "https://schema.org/countryCode": "CA"
+          }
+        ]
+      }
+    },
+    {
+      "https://schema.org/identifier": "https://id.gs1.org/01/00123456789129",
+      "https://schema.org/type": "https://gs1.org/voc/Product",
+      "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123",
+      "https://gs1.org/voc/gtin": "00123456789129",
+      "https://gs1.org/voc/certificationDetails": [
+        {
+          "https://schema.org/identifier": "http://www.example.com/certid=342543523523452345",
+          "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
+          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+          "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
+          "https://gs1.org/voc/certificationStatus": "ACTIVE",
+          "https://gs1.org/voc/certificationValue": "gold",
+          "https://gs1.org/voc/targetCountry": [
+            {
+              "https://schema.org/type": "https://schema.org/Country",
+              "https://schema.org/countryCode": "US"
+            }
+          ]
+        },
+        {
+          "https://schema.org/identifier": "http://www.example.com/certid=7897078908",
+          "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
+          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+          "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
+          "https://gs1.org/voc/certificationStatus": "ACTIVE",
+          "https://gs1.org/voc/certificationValue": "silver",
+          "https://gs1.org/voc/targetCountry": [
+            {
+              "https://schema.org/type": "https://schema.org/Country",
+              "https://schema.org/countryCode": "CA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

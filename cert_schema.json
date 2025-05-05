@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "issueDate",
+    "issuer",
+    "products"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier, could be a URL"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "CertificationReport"
+      ],
+      "description": "Type of document"
+    },
+    "issueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the certification report was issued"
+    },
+    "issuer": {
+      "type": "string",
+      "description": "The person or entity issuing the certification report"
+    },
+    "products": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/product"
+          }
+        },
+        {
+          "$ref": "#/definitions/product"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "product": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "gtin",
+        "description",
+        "certificationInfo"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier, usually a GS1 identifier URL"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Product"
+          ],
+          "description": "Type of product"
+        },
+        "gtin": {
+          "type": "string",
+          "pattern": "^[0-9]{14}$",
+          "description": "The 14-digit Global Trade Item Number"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the product"
+        },
+        "certificationInfo": {
+          "oneOf": [
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/certificationInfo"
+              }
+            },
+            {
+              "$ref": "#/definitions/certificationInfo"
+            }
+          ]
+        }
+      }
+    },
+    "certificationInfo": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "agency",
+        "standard",
+        "status",
+        "targetCountries"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unique identifier for the certification, could be a URL"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "CertificationDetails"
+          ],
+          "description": "Type of certification information"
+        },
+        "agency": {
+          "type": "string",
+          "description": "The agency responsible for the certification"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "End date of the certification"
+        },
+        "standard": {
+          "type": "string",
+          "description": "The certification standard, e.g., EPEAT"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "INACTIVE"
+          ],
+          "description": "Status of the certification"
+        },
+        "value": {
+          "type": "string",
+          "description": "Certification value, e.g., gold, silver"
+        },
+        "targetCountries": {
+          "oneOf": [
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/country"
+              }
+            },
+            {
+              "$ref": "#/definitions/country"
+            }
+          ]
+        }
+      }
+    },
+    "country": {
+      "type": "object",
+      "required": [
+        "type",
+        "countryCode"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Country"
+          ],
+          "description": "Type indicating this is a country"
+        },
+        "countryCode": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 country code"
+        }
+      }
+    }
+  }
+}
