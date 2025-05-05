@@ -20,15 +20,15 @@
                 "endDate":"2025-10-21",
                 "standard": "Certificate Program Specific Standard",
                 "status": "ACTIVE",
-                "value": "gold",
+                "value": "tier2",
                 "targetCountries": [
                     {
                         "type": "Country",
-                        "countryCode": "US"
+                        "countryCode": "840"
                     },
                     {
                         "type": "Country",
-                        "countryCode": "CA"
+                        "countryCode": "124"
                     }
                 ]
             }
@@ -47,10 +47,10 @@
                     "endDate":"2025-10-21",
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
-                    "value": "gold",
+                    "value": "tier1",
                     "targetCountries": {
                         "type": "Country",
-                        "countryCode": "US"
+                        "countryCode": "840"
                     }
                 },
                 {
@@ -60,10 +60,10 @@
                     "endDate":"2025-10-21",
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
-                    "value": "silver",
+                    "value": "tier2",
                     "targetCountries": {
                         "type": "Country",
-                        "countryCode": "CA"
+                        "countryCode": "124"
                     }
                 }
             ]
