@@ -127,7 +127,7 @@
         },
         "standard": {
           "type": "string",
-          "description": "The certification standard, e.g., EPEAT"
+          "description": "The certification standard, e.g., EPEAT, TCO Certified, Textile Exchange, etc."
         },
         "status": {
           "type": "string",
@@ -139,7 +139,7 @@
         },
         "value": {
           "type": "string",
-          "description": "Certification value, e.g., gold, silver"
+          "description": "Certification value, e.g., gold, silver, tier2, tier1, etc."
         },
         "targetCountries": {
           "oneOf": [
@@ -173,8 +173,8 @@
         },
         "countryCode": {
           "type": "string",
-          "pattern": "^[A-Z]{2}$",
-          "description": "ISO 3166-1 alpha-2 country code"
+          "pattern": "^[0-9]{3}$",
+          "description": "ISO 3166-1 numeric-3 digit country code"
         }
       }
     }
