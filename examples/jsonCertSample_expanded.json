@@ -16,15 +16,15 @@
         "https://gs1.org/voc/certificationEndDate": "2025-10-21",
         "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
         "https://gs1.org/voc/certificationStatus": "ACTIVE",
-        "https://gs1.org/voc/certificationValue": "gold",
+        "https://gs1.org/voc/certificationValue": "tier1",
         "https://gs1.org/voc/targetCountry": [
           {
             "https://schema.org/type": "https://schema.org/Country",
-            "https://schema.org/countryCode": "US"
+            "https://schema.org/countryCode": "840"
           },
           {
             "https://schema.org/type": "https://schema.org/Country",
-            "https://schema.org/countryCode": "CA"
+            "https://schema.org/countryCode": "124"
           }
         ]
       }
@@ -42,11 +42,11 @@
           "https://gs1.org/voc/certificationEndDate": "2025-10-21",
           "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
           "https://gs1.org/voc/certificationStatus": "ACTIVE",
-          "https://gs1.org/voc/certificationValue": "gold",
+          "https://gs1.org/voc/certificationValue": "tier1",
           "https://gs1.org/voc/targetCountry": [
             {
               "https://schema.org/type": "https://schema.org/Country",
-              "https://schema.org/countryCode": "US"
+              "https://schema.org/countryCode": "840"
             }
           ]
         },
@@ -57,11 +57,11 @@
           "https://gs1.org/voc/certificationEndDate": "2025-10-21",
           "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
           "https://gs1.org/voc/certificationStatus": "ACTIVE",
-          "https://gs1.org/voc/certificationValue": "silver",
+          "https://gs1.org/voc/certificationValue": "tier2",
           "https://gs1.org/voc/targetCountry": [
             {
               "https://schema.org/type": "https://schema.org/Country",
-              "https://schema.org/countryCode": "CA"
+              "https://schema.org/countryCode": "124"
             }
           ]
         }
