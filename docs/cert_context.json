@@ -1,49 +1,43 @@
 {
   "@context": {
+    "schema": "https://schema.org/",
+    "gs1": "https://gs1.org/voc/",
     "gs1x": "https://gs1.org/voc/x/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "gs1": "https://gs1.org/voc/",
-    "schema": "https://schema.org/",
-    "Text": "schema:Text",
 
-    "type": {
-      "@id": "https://schema.org/type",
-      "@type": "@id"
-    },
-    "CertificationReport": {
-      "@id": "gs1x:CertificationReport"
-    },
-    "Product": {
-      "@id": "gs1:Product"
-    },
-    "CertificationDetails": {
-      "@id": "gs1:CertificationDetails"
-    },
-    "Country": {
-      "@id": "gs1:Country"
-    },
+    "id": "@id",
+    "type": "@type",
 
-    "products": {
-      "@id": "gs1x:products",
-      "@type": "gs1:Product",
-      "@container": "@set"
-    },
-    "issuer": {
-      "@id": "gs1x:issuer",
-      "@type": "Text"
-    },
+    "CertificationReport": "gs1x:CertificationReport",
+    "Product": "gs1:Product",
+    "CertificationDetails": "gs1:CertificationDetails",
+    "Country": "gs1:Country",
+
     "issueDate": {
       "@id": "gs1x:issueDate",
       "@type": "xsd:dateTime"
     },
+    "issuer": {
+      "@id": "gs1x:issuer",
+      "@type": "schema:Text"
+    },
+    "products": {
+      "@id": "gs1x:products"
+    },
+
+    "gtin": {
+      "@id": "gs1:gtin",
+      "@type": "gs1:gtin"
+    },
+    "description": {
+      "@id": "gs1:productDescription",
+      "@type": "schema:Text"
+    },
     "certificationInfo": {
       "@id": "gs1:certificationDetails",
-      "@type": "@id"
+      "@container": "@set"
     },
-    "id": {
-      "@id": "schema:identifier",
-      "@type": "@id"
-    },
+
     "agency": "gs1:certificationAgency",
     "endDate": {
       "@id": "gs1:certificationEndDate",
@@ -52,18 +46,11 @@
     "standard": "gs1:certificationStandard",
     "status": "gs1:certificationStatus",
     "value": "gs1:certificationValue",
+
     "targetCountries": {
       "@id": "gs1:targetCountry",
-      "@container": "@set"
+      "@type": "@id"
     },
-    "countryCode": "schema:countryCode",
-    "gtin": {
-      "@id": "gs1:gtin",
-      "@type": "gs1:gtin"
-    },
-    "description": {
-      "@id": "gs1:productDescription",
-      "@type": "schema:Text"
-    }
+    "countryCode": "schema:countryCode"
   }
 }
