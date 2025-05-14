@@ -1,5 +1,5 @@
 {
-  "https://schema.org/identifier": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/examples/jsonCertSample.json?token=GHSAT0AAAAAACNSGJ6AHBT6EJ5LW4B3MNXUZYWU7PQ",
+  "https://schema.org/identifier": "https://gs1us-technology.github.io/examples/jsonCertSample_expanded.json",
   "https://schema.org/type": "https://gs1.org/voc/x/CertificationReport",
   "https://gs1.org/voc/x/issueDate": "2024-10-21T12:00:00Z",
   "https://gs1.org/voc/x/issuer": "Paul",
