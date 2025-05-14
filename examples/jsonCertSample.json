@@ -1,7 +1,7 @@
 
 {
-    "@context": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/cert_context.json?token=GHSAT0AAAAAACNSGJ6BZFJGIQAOMR6TR776ZYWWBOA",
-    "$schema": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/cert_schema.yaml?token=GHSAT0AAAAAACNSGJ6AFAPZCEOR6YOKTXY2ZYWWBBQ",
+    "@context": "https://gs1us-technology.github.io/certification-data-model/cert_context.json",
+    "$schema": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json",
     "id": "https://raw.githubusercontent.com/woodycreek/certification-details/refs/heads/main/examples/jsonCertSample.json?token=GHSAT0AAAAAACNSGJ6AHBT6EJ5LW4B3MNXUZYWU7PQ",
     "type": "CertificationReport",
     "issueDate": "2024-10-21T12:00:00Z",
