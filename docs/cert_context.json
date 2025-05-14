@@ -7,6 +7,9 @@
       "@id": "https://schema.org/type",
       "@type": "@id"
     },
+    "CertificationReport": {
+      "@id": "gs1x:CertificationReport"
+    },
     "products": {
       "@id": "gs1x:products",
       "@type": "gs1:Product",
