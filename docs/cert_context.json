@@ -3,6 +3,9 @@
     "gs1x": "https://gs1.org/voc/x/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "gs1": "https://gs1.org/voc/",
+    "schema": "https://schema.org/",
+    "Text": "schema:Text",
+
     "type": {
       "@id": "https://schema.org/type",
       "@type": "@id"
@@ -10,6 +13,16 @@
     "CertificationReport": {
       "@id": "gs1x:CertificationReport"
     },
+    "Product": {
+      "@id": "gs1:Product"
+    },
+    "CertificationDetails": {
+      "@id": "gs1:CertificationDetails"
+    },
+    "Country": {
+      "@id": "gs1:Country"
+    },
+
     "products": {
       "@id": "gs1x:products",
       "@type": "gs1:Product",
@@ -23,7 +36,6 @@
       "@id": "gs1x:issueDate",
       "@type": "xsd:dateTime"
     },
-    "schema": "https://schema.org/",
     "certificationInfo": {
       "@id": "gs1:certificationDetails",
       "@type": "@id"
