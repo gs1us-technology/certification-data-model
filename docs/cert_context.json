@@ -50,6 +50,9 @@
       "@id": "gs1:targetCountry",
       "@type": "@id"
     },
-    "countryCode": "schema:countryCode"
+    "countryCode": {
+      "@id": "gs1:countryCode",
+      "@type": "schema:Text"
+    }
   }
 }
