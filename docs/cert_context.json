@@ -34,8 +34,7 @@
       "@type": "schema:Text"
     },
     "certificationInfo": {
-      "@id": "gs1:certificationDetails",
-      "@container": "@set"
+      "@id": "gs1:certificationDetails"
     },
 
     "agency": "gs1:certificationAgency",

@@ -1,71 +1,202 @@
 {
-  "https://schema.org/identifier": "https://gs1us-technology.github.io/examples/jsonCertSample_expanded.json",
-  "https://schema.org/type": "https://gs1.org/voc/x/CertificationReport",
-  "https://gs1.org/voc/x/issueDate": "2024-10-21T12:00:00Z",
-  "https://gs1.org/voc/x/issuer": "Paul",
+  "@id": "https://gs1us-technology.github.io/examples/jsonCertSample.json",
+  "https://gs1.org/voc/x/issueDate": [
+    {
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value": "2024-10-21T12:00:00Z"
+    }
+  ],
+  "https://gs1.org/voc/x/issuer": [
+    {
+      "@type": "https://schema.org/Text",
+      "@value": "Paul"
+    }
+  ],
   "https://gs1.org/voc/x/products": [
     {
-      "https://schema.org/identifier": "https://id.gs1.org/01/00123456789128",
-      "https://schema.org/type": "https://gs1.org/voc/Product",
-      "https://gs1.org/voc/gtin": "00123456789128",
-      "https://gs1.org/voc/productDescription": "Brand Product Description for Product ABC",
-      "https://gs1.org/voc/certificationDetails": {
-        "https://schema.org/identifier": "http://www.example.com/certid=2342342",
-        "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
-        "https://gs1.org/voc/certificationAgency": "Certification Program Name",
-        "https://gs1.org/voc/certificationEndDate": "2025-10-21",
-        "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
-        "https://gs1.org/voc/certificationStatus": "ACTIVE",
-        "https://gs1.org/voc/certificationValue": "tier1",
-        "https://gs1.org/voc/targetCountry": [
-          {
-            "https://schema.org/type": "https://schema.org/Country",
-            "https://schema.org/countryCode": "840"
-          },
-          {
-            "https://schema.org/type": "https://schema.org/Country",
-            "https://schema.org/countryCode": "124"
-          }
-        ]
-      }
-    },
-    {
-      "https://schema.org/identifier": "https://id.gs1.org/01/00123456789129",
-      "https://schema.org/type": "https://gs1.org/voc/Product",
-      "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123",
-      "https://gs1.org/voc/gtin": "00123456789129",
       "https://gs1.org/voc/certificationDetails": [
         {
-          "https://schema.org/identifier": "http://www.example.com/certid=342543523523452345",
-          "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
-          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
-          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
-          "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
-          "https://gs1.org/voc/certificationStatus": "ACTIVE",
-          "https://gs1.org/voc/certificationValue": "tier1",
+          "https://gs1.org/voc/certificationAgency": [
+            {
+              "@value": "Certification Program Name"
+            }
+          ],
+          "https://gs1.org/voc/certificationEndDate": [
+            {
+              "@type": "https://schema.org/Date",
+              "@value": "2025-10-21"
+            }
+          ],
+          "@id": "http://www.example.com/certid=2342342",
+          "https://gs1.org/voc/certificationStandard": [
+            {
+              "@value": "Certificate Program Specific Standard"
+            }
+          ],
+          "https://gs1.org/voc/certificationStatus": [
+            {
+              "@value": "ACTIVE"
+            }
+          ],
           "https://gs1.org/voc/targetCountry": [
             {
-              "https://schema.org/type": "https://schema.org/Country",
-              "https://schema.org/countryCode": "840"
+              "https://schema.org/countryCode": [
+                {
+                  "@value": "840"
+                }
+              ],
+              "@type": [
+                "https://gs1.org/voc/Country"
+              ]
+            },
+            {
+              "https://schema.org/countryCode": [
+                {
+                  "@value": "124"
+                }
+              ],
+              "@type": [
+                "https://gs1.org/voc/Country"
+              ]
+            }
+          ],
+          "@type": [
+            "https://gs1.org/voc/CertificationDetails"
+          ],
+          "https://gs1.org/voc/certificationValue": [
+            {
+              "@value": "tier2"
+            }
+          ]
+        }
+      ],
+      "https://gs1.org/voc/productDescription": [
+        {
+          "@type": "https://schema.org/Text",
+          "@value": "Brand Product Description for Product ABC"
+        }
+      ],
+      "https://gs1.org/voc/gtin": [
+        {
+          "@type": "https://gs1.org/voc/gtin",
+          "@value": "00123456789128"
+        }
+      ],
+      "@id": "https://id.gs1.org/01/00123456789128",
+      "@type": [
+        "https://gs1.org/voc/Product"
+      ]
+    },
+    {
+      "https://gs1.org/voc/certificationDetails": [
+        {
+          "https://gs1.org/voc/certificationAgency": [
+            {
+              "@value": "Certification Program Name"
+            }
+          ],
+          "https://gs1.org/voc/certificationEndDate": [
+            {
+              "@type": "https://schema.org/Date",
+              "@value": "2025-10-21"
+            }
+          ],
+          "@id": "http://www.example.com/certid=342543523523452345",
+          "https://gs1.org/voc/certificationStandard": [
+            {
+              "@value": "Certificate Program Specific Standard"
+            }
+          ],
+          "https://gs1.org/voc/certificationStatus": [
+            {
+              "@value": "ACTIVE"
+            }
+          ],
+          "https://gs1.org/voc/targetCountry": [
+            {
+              "https://schema.org/countryCode": [
+                {
+                  "@value": "840"
+                }
+              ],
+              "@type": [
+                "https://gs1.org/voc/Country"
+              ]
+            }
+          ],
+          "@type": [
+            "https://gs1.org/voc/CertificationDetails"
+          ],
+          "https://gs1.org/voc/certificationValue": [
+            {
+              "@value": "tier1"
             }
           ]
         },
         {
-          "https://schema.org/identifier": "http://www.example.com/certid=7897078908",
-          "https://schema.org/type": "https://gs1.org/voc/CertificationDetails",
-          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
-          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
-          "https://gs1.org/voc/certificationStandard": "Certification Program Specific Standard",
-          "https://gs1.org/voc/certificationStatus": "ACTIVE",
-          "https://gs1.org/voc/certificationValue": "tier2",
+          "https://gs1.org/voc/certificationAgency": [
+            {
+              "@value": "Certification Program Name"
+            }
+          ],
+          "https://gs1.org/voc/certificationEndDate": [
+            {
+              "@type": "https://schema.org/Date",
+              "@value": "2025-10-21"
+            }
+          ],
+          "@id": "http://www.example.com/certid=7897078908",
+          "https://gs1.org/voc/certificationStandard": [
+            {
+              "@value": "Certificate Program Specific Standard"
+            }
+          ],
+          "https://gs1.org/voc/certificationStatus": [
+            {
+              "@value": "ACTIVE"
+            }
+          ],
           "https://gs1.org/voc/targetCountry": [
             {
-              "https://schema.org/type": "https://schema.org/Country",
-              "https://schema.org/countryCode": "124"
+              "https://schema.org/countryCode": [
+                {
+                  "@value": "124"
+                }
+              ],
+              "@type": [
+                "https://gs1.org/voc/Country"
+              ]
+            }
+          ],
+          "@type": [
+            "https://gs1.org/voc/CertificationDetails"
+          ],
+          "https://gs1.org/voc/certificationValue": [
+            {
+              "@value": "tier2"
             }
           ]
         }
+      ],
+      "https://gs1.org/voc/productDescription": [
+        {
+          "@type": "https://schema.org/Text",
+          "@value": "Brand Product Description for Product 123"
+        }
+      ],
+      "https://gs1.org/voc/gtin": [
+        {
+          "@type": "https://gs1.org/voc/gtin",
+          "@value": "00123456789129"
+        }
+      ],
+      "@id": "https://id.gs1.org/01/00123456789129",
+      "@type": [
+        "https://gs1.org/voc/Product"
       ]
     }
+  ],
+  "@type": [
+    "https://gs1.org/voc/x/CertificationReport"
   ]
 }
