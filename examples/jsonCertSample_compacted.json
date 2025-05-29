@@ -1,0 +1,79 @@
+{
+  "@id": "https://gs1us-technology.github.io/examples/jsonCertSample.json",
+  "@type": "https://gs1.org/voc/x/CertificationReport",
+  "https://gs1.org/voc/x/issueDate": {
+    "@type": "http://www.w3.org/2001/XMLSchema#date",
+    "@value": "2024-10-21"
+  },
+  "https://gs1.org/voc/x/issuer": {
+    "@type": "http://www.w3.org/2001/XMLSchema#string",
+    "@value": "Certification Report Creator"
+  },
+  "https://gs1.org/voc/x/products": [
+    {
+      "@id": "https://id.gs1.org/01/00123456789128",
+      "@type": "https://gs1.org/voc/Product",
+      "https://gs1.org/voc/certificationDetails": {
+        "@id": "http://www.example.com/certid=2342342",
+        "@type": "https://gs1.org/voc/CertificationDetails",
+        "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+        "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+        "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
+        "https://gs1.org/voc/certificationStatus": "ACTIVE",
+        "https://gs1.org/voc/certificationValue": "tier2",
+        "https://gs1.org/voc/targetCountry": [
+          {
+            "@type": "https://gs1.org/voc/Country",
+            "https://gs1.org/voc/countryCode": "840"
+          },
+          {
+            "@type": "https://gs1.org/voc/Country",
+            "https://gs1.org/voc/countryCode": "124"
+          }
+        ]
+      },
+      "https://gs1.org/voc/gtin": {
+        "@type": "https://gs1.org/voc/gtin",
+        "@value": "00123456789128"
+      },
+      "https://gs1.org/voc/productDescription": "Brand Product Description for Product ABC"
+    },
+    {
+      "@id": "https://id.gs1.org/01/00123456789129",
+      "@type": "https://gs1.org/voc/Product",
+      "https://gs1.org/voc/certificationDetails": [
+        {
+          "@id": "http://www.example.com/certid=342543523523452345",
+          "@type": "https://gs1.org/voc/CertificationDetails",
+          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+          "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
+          "https://gs1.org/voc/certificationStatus": "ACTIVE",
+          "https://gs1.org/voc/certificationValue": "tier1",
+          "https://gs1.org/voc/targetCountry": {
+            "@type": "https://gs1.org/voc/Country",
+            "https://gs1.org/voc/countryCode": "840"
+          }
+        },
+        {
+          "@id": "http://www.example.com/certid=7897078908",
+          "@type": "https://gs1.org/voc/CertificationDetails",
+          "https://gs1.org/voc/certificationAgency": "Certification Program Name",
+          "https://gs1.org/voc/certificationEndDate": "2025-10-21",
+          "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
+          "https://gs1.org/voc/certificationStatus": "ACTIVE",
+          "https://gs1.org/voc/certificationValue": "tier2",
+          "https://gs1.org/voc/targetCountry": {
+            "@type": "https://gs1.org/voc/Country",
+            "https://gs1.org/voc/countryCode": "124"
+          }
+        }
+      ],
+      "https://gs1.org/voc/gtin": {
+        "@type": "https://gs1.org/voc/gtin",
+        "@value": "00123456789129"
+      },
+      "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123"
+    }
+  ]
+}
