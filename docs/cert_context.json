@@ -1,6 +1,5 @@
 {
   "@context": {
-    "schema": "https://schema.org/",
     "gs1": "https://gs1.org/voc/",
     "gs1x": "https://gs1.org/voc/x/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -15,14 +14,16 @@
 
     "issueDate": {
       "@id": "gs1x:issueDate",
-      "@type": "xsd:dateTime"
+      "@type": "xsd:date"
     },
     "issuer": {
       "@id": "gs1x:issuer",
-      "@type": "schema:Text"
+      "@type": "xsd:string"
     },
     "products": {
-      "@id": "gs1x:products"
+      "@id": "gs1x:products",
+      "@type": "@vocab",
+      "@container": "@set"
     },
 
     "gtin": {
@@ -30,8 +31,7 @@
       "@type": "gs1:gtin"
     },
     "description": {
-      "@id": "gs1:productDescription",
-      "@type": "schema:Text"
+      "@id": "gs1:productDescription"
     },
     "certificationInfo": {
       "@id": "gs1:certificationDetails"
@@ -39,20 +39,17 @@
 
     "agency": "gs1:certificationAgency",
     "endDate": {
-      "@id": "gs1:certificationEndDate",
-      "@type": "schema:Date"
+      "@id": "gs1:certificationEndDate"
     },
     "standard": "gs1:certificationStandard",
     "status": "gs1:certificationStatus",
     "value": "gs1:certificationValue",
 
     "targetCountries": {
-      "@id": "gs1:targetCountry",
-      "@type": "@id"
+      "@id": "gs1:targetCountry"
     },
     "countryCode": {
-      "@id": "gs1:countryCode",
-      "@type": "schema:Text"
+      "@id": "gs1:countryCode"
     }
   }
 }
