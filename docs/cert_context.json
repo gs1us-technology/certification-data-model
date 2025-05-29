@@ -27,8 +27,7 @@
     },
 
     "gtin": {
-      "@id": "gs1:gtin",
-      "@type": "gs1:gtin"
+      "@id": "gs1:gtin"
     },
     "description": {
       "@id": "gs1:productDescription"
