@@ -32,10 +32,7 @@
           }
         ]
       },
-      "https://gs1.org/voc/gtin": {
-        "@type": "https://gs1.org/voc/gtin",
-        "@value": "00123456789128"
-      },
+      "https://gs1.org/voc/gtin": "00123456789128",
       "https://gs1.org/voc/productDescription": "Brand Product Description for Product ABC"
     },
     {
@@ -69,10 +66,7 @@
           }
         }
       ],
-      "https://gs1.org/voc/gtin": {
-        "@type": "https://gs1.org/voc/gtin",
-        "@value": "00123456789129"
-      },
+      "https://gs1.org/voc/gtin": "00123456789129",
       "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123"
     }
   ]
