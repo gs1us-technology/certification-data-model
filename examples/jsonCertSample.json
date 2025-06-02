@@ -22,6 +22,7 @@
                 "standard": "Certificate Program Specific Standard",
                 "status": "ACTIVE",
                 "value": "tier2",
+                "certificateId" : "AB1234567",
                 "targetCountries": [
                     {
                         "type": "Country",
@@ -50,6 +51,7 @@
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
                     "value": "tier1",
+                    "certificateId" : "CDXX20345",
                     "targetCountries": {
                         "type": "Country",
                         "countryCode": "840"
@@ -64,6 +66,7 @@
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
                     "value": "tier2",
+                    "certificateId" : "BB7C306F",
                     "targetCountries": {
                         "type": "Country",
                         "countryCode": "124"

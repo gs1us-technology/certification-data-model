@@ -98,7 +98,7 @@
         "type",
         "agency",
         "standard",
-        "status",
+        "status"
       ],
       "properties": {
         "id": {
@@ -129,6 +129,10 @@
         "standard": {
           "type": "string",
           "description": "The certification standard, e.g., EPEAT, TCO Certified, Textile Exchange, etc."
+        },
+        "certificateId" : {
+          "type": "string",
+          "description": "A vendor Specific ceritficate ID."
         },
         "status": {
           "type": "string",

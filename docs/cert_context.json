@@ -42,6 +42,7 @@
     },
     "standard": "gs1:certificationStandard",
     "status": "gs1:certificationStatus",
+    "certificateId" : "gs1:certificationIdentification",
     "program": {
       "@id": "gs1x:certificationProgram",
       "@type" : "rdf:langString"
