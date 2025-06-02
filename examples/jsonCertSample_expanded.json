@@ -19,7 +19,12 @@
           {
             "https://gs1.org/voc/certificationAgency": [
               {
-                "@value": "Certification Program Name"
+                "@value": "Certification Agency"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "AB1234567"
               }
             ],
             "https://gs1.org/voc/certificationEndDate": [
@@ -28,6 +33,12 @@
               }
             ],
             "@id": "http://www.example.com/certid=2342342",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "Certification Program Name"
+              }
+            ],
             "https://gs1.org/voc/certificationStandard": [
               {
                 "@value": "Certificate Program Specific Standard"
@@ -90,7 +101,12 @@
           {
             "https://gs1.org/voc/certificationAgency": [
               {
-                "@value": "Certification Program Name"
+                "@value": "Certification Agency"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "CDXX20345"
               }
             ],
             "https://gs1.org/voc/certificationEndDate": [
@@ -99,6 +115,12 @@
               }
             ],
             "@id": "http://www.example.com/certid=342543523523452345",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "Certification Program Name"
+              }
+            ],
             "https://gs1.org/voc/certificationStandard": [
               {
                 "@value": "Certificate Program Specific Standard"
@@ -133,7 +155,12 @@
           {
             "https://gs1.org/voc/certificationAgency": [
               {
-                "@value": "Certification Program Name"
+                "@value": "Certification Agency"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "BB7C306F"
               }
             ],
             "https://gs1.org/voc/certificationEndDate": [
@@ -142,6 +169,12 @@
               }
             ],
             "@id": "http://www.example.com/certid=7897078908",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "Certification Program Name"
+              }
+            ],
             "https://gs1.org/voc/certificationStandard": [
               {
                 "@value": "Certificate Program Specific Standard"
