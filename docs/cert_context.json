@@ -42,6 +42,10 @@
     },
     "standard": "gs1:certificationStandard",
     "status": "gs1:certificationStatus",
+    "program": {
+      "@id": "gs1x:certificationProgram",
+      "@type" : "rdf:langString"
+    },
     "value": "gs1:certificationValue",
 
     "targetCountries": {

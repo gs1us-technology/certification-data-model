@@ -16,7 +16,8 @@
             "certificationInfo": {
                 "id": "http://www.example.com/certid=2342342",
                 "type": "CertificationDetails",
-                "agency": "Certification Program Name",
+                "agency": "Certification Agency",
+                "program": "Certification Program Name",
                 "endDate":"2025-10-21",
                 "standard": "Certificate Program Specific Standard",
                 "status": "ACTIVE",
@@ -43,7 +44,8 @@
                 {
                     "id": "http://www.example.com/certid=342543523523452345",
                     "type": "CertificationDetails",
-                    "agency": "Certification Program Name",
+                    "agency": "Certification Agency",
+                    "program": "Certification Program Name",
                     "endDate":"2025-10-21",
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
@@ -56,7 +58,8 @@
                 {
                     "id": "http://www.example.com/certid=7897078908",
                     "type": "CertificationDetails",
-                    "agency": "Certification Program Name",
+                    "agency": "Certification Agency",
+                    "program": "Certification Program Name",
                     "endDate":"2025-10-21",
                     "standard": "Certificate Program Specific Standard",
                     "status": "ACTIVE",
