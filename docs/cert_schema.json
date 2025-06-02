@@ -4,8 +4,6 @@
   "required": [
     "id",
     "type",
-    "issueDate",
-    "issuer",
     "products"
   ],
   "properties": {
