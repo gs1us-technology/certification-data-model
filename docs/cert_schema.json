@@ -101,7 +101,6 @@
         "agency",
         "standard",
         "status",
-        "targetCountries"
       ],
       "properties": {
         "id": {
@@ -146,6 +145,7 @@
           "description": "Certification value, e.g., gold, silver, tier2, tier1, etc."
         },
         "targetCountries": {
+          "description": "List of countries this certification applies. if absent, certification is not country specific.",
           "oneOf": [
             {
               "type": "array",
