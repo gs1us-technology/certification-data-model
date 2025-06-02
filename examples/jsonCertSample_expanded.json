@@ -15,7 +15,7 @@
     ],
     "https://gs1.org/voc/x/products": [
       {
-        "https://gs1.org/voc/certificationDetails": [
+        "https://gs1.org/voc/certification": [
           {
             "https://gs1.org/voc/certificationAgency": [
               {
@@ -97,7 +97,7 @@
         ]
       },
       {
-        "https://gs1.org/voc/certificationDetails": [
+        "https://gs1.org/voc/certification": [
           {
             "https://gs1.org/voc/certificationAgency": [
               {

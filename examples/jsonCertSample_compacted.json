@@ -13,7 +13,7 @@
     {
       "@id": "https://id.gs1.org/01/00123456789128",
       "@type": "https://gs1.org/voc/Product",
-      "https://gs1.org/voc/certificationDetails": {
+      "https://gs1.org/voc/certification": {
         "@id": "http://www.example.com/certid=2342342",
         "@type": "https://gs1.org/voc/CertificationDetails",
         "https://gs1.org/voc/certificationAgency": "Certification Agency",
@@ -43,7 +43,7 @@
     {
       "@id": "https://id.gs1.org/01/00123456789129",
       "@type": "https://gs1.org/voc/Product",
-      "https://gs1.org/voc/certificationDetails": [
+      "https://gs1.org/voc/certification": [
         {
           "@id": "http://www.example.com/certid=342543523523452345",
           "@type": "https://gs1.org/voc/CertificationDetails",
