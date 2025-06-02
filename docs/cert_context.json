@@ -33,7 +33,7 @@
       "@id": "gs1:productDescription"
     },
     "certificationInfo": {
-      "@id": "gs1:certificationDetails"
+      "@id": "gs1:certification"
     },
 
     "agency": "gs1:certificationAgency",
