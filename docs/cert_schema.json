@@ -120,6 +120,10 @@
           "type": "string",
           "description": "The agency responsible for the certification"
         },
+        "program": {
+          "type": "string",
+          "description": "The certification program (when applicable)"
+        },
         "endDate": {
           "type": "string",
           "format": "date",
