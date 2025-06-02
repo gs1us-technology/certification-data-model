@@ -57,7 +57,8 @@
         "id": {
           "type": "string",
           "format": "uri",
-          "description": "Unique identifier, usually a GS1 identifier URL"
+          "pattern": "^(https?|HTTPS?):(\\/\\/((([^\\/?#]*)@)?([^\\/?#:]*)(:([^\\/?#]*))?))?([^?#]*)(((\\/(01|8006|8013|8010|414|415|417|8017|8018|255|00|253|401|402|8003|8004)\\/)(\\d{4}[^\\/]+)(\\/[^\\/]+\\/[^\\/]+)?[\\/]?(\\?([^?\\n]*))?(#([^\\n]*))?))$",
+          "description": "Unique identifier, a GS1 Digital Link URI"
         },
         "type": {
           "type": "string",
