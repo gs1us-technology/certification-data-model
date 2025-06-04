@@ -50,7 +50,6 @@
         "id",
         "type",
         "gtin",
-        "description",
         "certificationInfo"
       ],
       "properties": {
