@@ -32,6 +32,9 @@
     "description": {
       "@id": "gs1:productDescription"
     },
+    "additionalTradeItemIdentifier": {
+      "@id": "gs1:productID"
+    },
     "certificationInfo": {
       "@id": "gs1:certification"
     },
