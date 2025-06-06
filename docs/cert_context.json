@@ -3,6 +3,8 @@
     "gs1": "https://gs1.org/voc/",
     "gs1x": "https://gs1.org/voc/x/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gs1cert": "https://ref.gs1.org/voc/CertificationStatus#",
+    "@vocab": "https://ref.gs1.org/voc/CertificationStatus#",
 
     "id": "@id",
     "type": "@type",
@@ -44,7 +46,12 @@
       "@id": "gs1:certificationEndDate"
     },
     "standard": "gs1:certificationStandard",
-    "status": "gs1:certificationStatus",
+
+    "status": {
+      "@id": "gs1:certificationStatus",
+      "@type": "@vocab"
+    },
+
     "certificateId" : "gs1:certificationIdentification",
     "program": {
       "@id": "gs1x:certificationProgram",
