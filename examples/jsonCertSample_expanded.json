@@ -1,5 +1,10 @@
 [
   {
+    "https://ref.gs1.org/voc/CertificationStatus#$schema": [
+      {
+        "@value": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json"
+      }
+    ],
     "@id": "https://gs1us-technology.github.io/examples/jsonCertSample.json",
     "https://gs1.org/voc/x/issueDate": [
       {
@@ -15,6 +20,11 @@
     ],
     "https://gs1.org/voc/x/products": [
       {
+        "https://gs1.org/voc/productID": [
+          {
+            "@value": "B07PGL2ZSL"
+          }
+        ],
         "https://gs1.org/voc/certification": [
           {
             "https://gs1.org/voc/certificationAgency": [
@@ -46,10 +56,10 @@
             ],
             "https://gs1.org/voc/certificationStatus": [
               {
-                "@value": "ACTIVE"
+                "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
               }
             ],
-            "https://gs1.org/voc/targetCountry": [
+            "https://gs1.org/voc/x/certificationApplicableCountries": [
               {
                 "https://gs1.org/voc/countryCode": [
                   {
@@ -97,6 +107,11 @@
         ]
       },
       {
+        "https://gs1.org/voc/productID": [
+          {
+            "@value": "B08XYF2G5N"
+          }
+        ],
         "https://gs1.org/voc/certification": [
           {
             "https://gs1.org/voc/certificationAgency": [
@@ -128,10 +143,10 @@
             ],
             "https://gs1.org/voc/certificationStatus": [
               {
-                "@value": "ACTIVE"
+                "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
               }
             ],
-            "https://gs1.org/voc/targetCountry": [
+            "https://gs1.org/voc/x/certificationApplicableCountries": [
               {
                 "https://gs1.org/voc/countryCode": [
                   {
@@ -182,10 +197,10 @@
             ],
             "https://gs1.org/voc/certificationStatus": [
               {
-                "@value": "ACTIVE"
+                "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
               }
             ],
-            "https://gs1.org/voc/targetCountry": [
+            "https://gs1.org/voc/x/certificationApplicableCountries": [
               {
                 "https://gs1.org/voc/countryCode": [
                   {
