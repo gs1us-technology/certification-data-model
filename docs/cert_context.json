@@ -60,7 +60,7 @@
     "value": "gs1:certificationValue",
 
     "targetCountries": {
-      "@id": "gs1:targetCountry"
+      "@id": "gs1x:certificationApplicableCountries"
     },
     "countryCode": {
       "@id": "gs1:countryCode"
