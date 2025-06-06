@@ -21,7 +21,7 @@
         "https://gs1.org/voc/certificationIdentification": "AB1234567",
         "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
         "https://gs1.org/voc/certificationStatus": {
-          "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
+          "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
         },
         "https://gs1.org/voc/certificationValue": "tier2",
         "https://gs1.org/voc/x/certificationApplicableCountries": [
@@ -55,7 +55,7 @@
           "https://gs1.org/voc/certificationIdentification": "CDXX20345",
           "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
           "https://gs1.org/voc/certificationStatus": {
-            "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
+            "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
           },
           "https://gs1.org/voc/certificationValue": "tier1",
           "https://gs1.org/voc/x/certificationApplicableCountries": {
@@ -75,7 +75,7 @@
           "https://gs1.org/voc/certificationIdentification": "BB7C306F",
           "https://gs1.org/voc/certificationStandard": "Certificate Program Specific Standard",
           "https://gs1.org/voc/certificationStatus": {
-            "@id": "https://ref.gs1.org/voc/CertificationStatus#ACTIVE"
+            "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
           },
           "https://gs1.org/voc/certificationValue": "tier2",
           "https://gs1.org/voc/x/certificationApplicableCountries": {
@@ -92,6 +92,5 @@
       "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123",
       "https://gs1.org/voc/productID": "B08XYF2G5N"
     }
-  ],
-  "https://ref.gs1.org/voc/CertificationStatus#$schema": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json"
+  ]
 }
