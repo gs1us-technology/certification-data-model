@@ -13,7 +13,6 @@
     "Product": "gs1:Product",
     "CertificationDetails": "gs1:CertificationDetails",
     "Country": "gs1:Country",
-    "targetCountries": "gs1x:certificationApplicableCountries",
 
     "issueDate": {
       "@id": "gs1x:issueDate",
@@ -59,6 +58,10 @@
       "@type" : "rdf:langString"
     },
     "value": "gs1:certificationValue",
+
+    "targetCountries": {
+      "@id": "gs1x:certificationApplicableCountries"
+    },
 
     "countryCode": {
       "@id": "gs1:countryCode"
