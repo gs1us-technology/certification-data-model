@@ -1,0 +1,105 @@
+{
+    "@context": "https://gs1us-technology.github.io/certification-data-model/cert_context.json",
+    "@schema": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json",
+    "id": "DC2F59AF-2B1D-7943-B911-69FF3CEBD711",
+    "issueDate": "2025-06-10",
+    "issuer": "TCO Development",
+    "products": [
+        {
+            "certificationInfo": {
+                "agency": "TCO Development",
+                "agencyURL": "https://tcocertified.com/",
+                "certificateId": "N1024110004",
+                "endDate": "2026-12-04",
+                "id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+                "program": "TCO Certified",
+                "standard": "TCO Certified, generation 10, for notebooks",
+                "startDate": "2024-12-04",
+                "status": "ACTIVE",
+                "value": ""
+            },
+            "description": "",
+            "gtin": "06942292175384",
+            "id": "https://id.gs1.org/01/06942292175384",
+            "productName": "ThinkBook 14 G8 IRL",
+            "type": "Product"
+        },
+        {
+            "certificationInfo": {
+                "agency": "TCO Development",
+                "agencyURL": "https://tcocertified.com/",
+                "certificateId": "N1024110004",
+                "endDate": "2026-12-04",
+                "id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+                "program": "TCO Certified",
+                "standard": "TCO Certified, generation 10, for notebooks",
+                "startDate": "2024-12-04",
+                "status": "ACTIVE",
+                "value": ""
+            },
+            "description": "",
+            "gtin": "00198155473487",
+            "id": "https://id.gs1.org/01/00198155473487",
+            "productName": "ThinkBook 14 G8 IRL",
+            "type": "Product"
+        },
+        {
+            "certificationInfo": {
+                "agency": "TCO Development",
+                "agencyURL": "https://tcocertified.com/",
+                "certificateId": "N1024110004",
+                "endDate": "2026-12-04",
+                "id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+                "program": "TCO Certified",
+                "standard": "TCO Certified, generation 10, for notebooks",
+                "startDate": "2024-12-04",
+                "status": "ACTIVE",
+                "value": ""
+            },
+            "description": "",
+            "gtin": "00198155484704",
+            "id": "https://id.gs1.org/01/00198155484704",
+            "productName": "ThinkBook 14 G8 IRL",
+            "type": "Product"
+        },
+        {
+            "certificationInfo": {
+                "agency": "TCO Development",
+                "agencyURL": "https://tcocertified.com/",
+                "certificateId": "N1024110004",
+                "endDate": "2026-12-04",
+                "id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+                "program": "TCO Certified",
+                "standard": "TCO Certified, generation 10, for notebooks",
+                "startDate": "2024-12-04",
+                "status": "ACTIVE",
+                "value": ""
+            },
+            "description": "",
+            "gtin": "00198155510700",
+            "id": "https://id.gs1.org/01/00198155510700",
+            "productName": "ThinkBook 14 G8 IRL",
+            "type": "Product"
+        },
+        {
+            "certificationInfo": {
+                "agency": "TCO Development",
+                "agencyURL": "https://tcocertified.com/",
+                "certificateId": "N1024110004",
+                "endDate": "2026-12-04",
+                "id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+                "program": "TCO Certified",
+                "standard": "TCO Certified, generation 10, for notebooks",
+                "startDate": "2024-12-04",
+                "status": "ACTIVE",
+                "value": ""
+            },
+            "description": "",
+            "gtin": "00198155510717",
+            "id": "https://id.gs1.org/01/00198155510717",
+            "productName": "ThinkBook 14 G8 IRL",
+            "type": "Product"
+        }
+    ],
+    "type": "CertificationReport"
+}
