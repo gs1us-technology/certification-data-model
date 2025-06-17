@@ -1,0 +1,347 @@
+[
+  {
+    "@id": "https://tcocertified.com/reports/DC2F59AF-2B1D-7943-B911-69FF3CEBD711",
+    "https://gs1.org/voc/x/issueDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-06-10"
+      }
+    ],
+    "https://gs1.org/voc/x/issuer": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "TCO Development"
+      }
+    ],
+    "https://gs1.org/voc/x/products": [
+      {
+        "https://gs1.org/voc/certification": [
+          {
+            "https://gs1.org/voc/certificationAgency": [
+              {
+                "@value": "TCO Development"
+              }
+            ],
+            "https://gs1.org/voc/certificationAgencyURL": [
+              {
+                "@value": "https://tcocertified.com/"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "N1024110004"
+              }
+            ],
+            "https://gs1.org/voc/certificationEndDate": [
+              {
+                "@value": "2026-12-04"
+              }
+            ],
+            "@id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "TCO Certified"
+              }
+            ],
+            "https://gs1.org/voc/certificationStandard": [
+              {
+                "@value": "TCO Certified, generation 10, for notebooks"
+              }
+            ],
+            "https://gs1.org/voc/certificationStartDate": [
+              {
+                "@value": "2024-12-04"
+              }
+            ],
+            "https://gs1.org/voc/certificationStatus": [
+              {
+                "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
+              }
+            ],
+            "@type": [
+              "https://gs1.org/voc/CertificationDetails"
+            ]
+          }
+        ],
+        "https://gs1.org/voc/gtin": [
+          {
+            "@value": "06942292175384"
+          }
+        ],
+        "@id": "https://id.gs1.org/01/06942292175384",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ThinkBook 14 G8 IRL"
+          }
+        ],
+        "@type": [
+          "https://gs1.org/voc/Product"
+        ]
+      },
+      {
+        "https://gs1.org/voc/certification": [
+          {
+            "https://gs1.org/voc/certificationAgency": [
+              {
+                "@value": "TCO Development"
+              }
+            ],
+            "https://gs1.org/voc/certificationAgencyURL": [
+              {
+                "@value": "https://tcocertified.com/"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "N1024110004"
+              }
+            ],
+            "https://gs1.org/voc/certificationEndDate": [
+              {
+                "@value": "2026-12-04"
+              }
+            ],
+            "@id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "TCO Certified"
+              }
+            ],
+            "https://gs1.org/voc/certificationStandard": [
+              {
+                "@value": "TCO Certified, generation 10, for notebooks"
+              }
+            ],
+            "https://gs1.org/voc/certificationStartDate": [
+              {
+                "@value": "2024-12-04"
+              }
+            ],
+            "https://gs1.org/voc/certificationStatus": [
+              {
+                "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
+              }
+            ],
+            "@type": [
+              "https://gs1.org/voc/CertificationDetails"
+            ]
+          }
+        ],
+        "https://gs1.org/voc/gtin": [
+          {
+            "@value": "00198155473487"
+          }
+        ],
+        "@id": "https://id.gs1.org/01/00198155473487",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ThinkBook 14 G8 IRL"
+          }
+        ],
+        "@type": [
+          "https://gs1.org/voc/Product"
+        ]
+      },
+      {
+        "https://gs1.org/voc/certification": [
+          {
+            "https://gs1.org/voc/certificationAgency": [
+              {
+                "@value": "TCO Development"
+              }
+            ],
+            "https://gs1.org/voc/certificationAgencyURL": [
+              {
+                "@value": "https://tcocertified.com/"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "N1024110004"
+              }
+            ],
+            "https://gs1.org/voc/certificationEndDate": [
+              {
+                "@value": "2026-12-04"
+              }
+            ],
+            "@id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "TCO Certified"
+              }
+            ],
+            "https://gs1.org/voc/certificationStandard": [
+              {
+                "@value": "TCO Certified, generation 10, for notebooks"
+              }
+            ],
+            "https://gs1.org/voc/certificationStartDate": [
+              {
+                "@value": "2024-12-04"
+              }
+            ],
+            "https://gs1.org/voc/certificationStatus": [
+              {
+                "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
+              }
+            ],
+            "@type": [
+              "https://gs1.org/voc/CertificationDetails"
+            ]
+          }
+        ],
+        "https://gs1.org/voc/gtin": [
+          {
+            "@value": "00198155484704"
+          }
+        ],
+        "@id": "https://id.gs1.org/01/00198155484704",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ThinkBook 14 G8 IRL"
+          }
+        ],
+        "@type": [
+          "https://gs1.org/voc/Product"
+        ]
+      },
+      {
+        "https://gs1.org/voc/certification": [
+          {
+            "https://gs1.org/voc/certificationAgency": [
+              {
+                "@value": "TCO Development"
+              }
+            ],
+            "https://gs1.org/voc/certificationAgencyURL": [
+              {
+                "@value": "https://tcocertified.com/"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "N1024110004"
+              }
+            ],
+            "https://gs1.org/voc/certificationEndDate": [
+              {
+                "@value": "2026-12-04"
+              }
+            ],
+            "@id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "TCO Certified"
+              }
+            ],
+            "https://gs1.org/voc/certificationStandard": [
+              {
+                "@value": "TCO Certified, generation 10, for notebooks"
+              }
+            ],
+            "https://gs1.org/voc/certificationStartDate": [
+              {
+                "@value": "2024-12-04"
+              }
+            ],
+            "https://gs1.org/voc/certificationStatus": [
+              {
+                "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
+              }
+            ],
+            "@type": [
+              "https://gs1.org/voc/CertificationDetails"
+            ]
+          }
+        ],
+        "https://gs1.org/voc/gtin": [
+          {
+            "@value": "00198155510700"
+          }
+        ],
+        "@id": "https://id.gs1.org/01/00198155510700",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ThinkBook 14 G8 IRL"
+          }
+        ],
+        "@type": [
+          "https://gs1.org/voc/Product"
+        ]
+      },
+      {
+        "https://gs1.org/voc/certification": [
+          {
+            "https://gs1.org/voc/certificationAgency": [
+              {
+                "@value": "TCO Development"
+              }
+            ],
+            "https://gs1.org/voc/certificationAgencyURL": [
+              {
+                "@value": "https://tcocertified.com/"
+              }
+            ],
+            "https://gs1.org/voc/certificationIdentification": [
+              {
+                "@value": "N1024110004"
+              }
+            ],
+            "https://gs1.org/voc/certificationEndDate": [
+              {
+                "@value": "2026-12-04"
+              }
+            ],
+            "@id": "https://tcocertified.com/product-finder/?cert=N1024110004",
+            "https://gs1.org/voc/x/certificationProgram": [
+              {
+                "@type": "rdf:langString",
+                "@value": "TCO Certified"
+              }
+            ],
+            "https://gs1.org/voc/certificationStandard": [
+              {
+                "@value": "TCO Certified, generation 10, for notebooks"
+              }
+            ],
+            "https://gs1.org/voc/certificationStartDate": [
+              {
+                "@value": "2024-12-04"
+              }
+            ],
+            "https://gs1.org/voc/certificationStatus": [
+              {
+                "@id": "https://ref.gs1.org/voc/CertificationStatus-ACTIVE"
+              }
+            ],
+            "@type": [
+              "https://gs1.org/voc/CertificationDetails"
+            ]
+          }
+        ],
+        "https://gs1.org/voc/gtin": [
+          {
+            "@value": "00198155510717"
+          }
+        ],
+        "@id": "https://id.gs1.org/01/00198155510717",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ThinkBook 14 G8 IRL"
+          }
+        ],
+        "@type": [
+          "https://gs1.org/voc/Product"
+        ]
+      }
+    ],
+    "@type": [
+      "https://gs1.org/voc/x/CertificationReport"
+    ]
+  }
+]
