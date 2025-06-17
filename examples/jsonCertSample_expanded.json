@@ -97,6 +97,11 @@
           }
         ],
         "@id": "https://id.gs1.org/01/00123456789128",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "ABC"
+          }
+        ],
         "@type": [
           "https://gs1.org/voc/Product"
         ]
@@ -228,6 +233,11 @@
           }
         ],
         "@id": "https://id.gs1.org/01/00123456789129",
+        "https://gs1.org/voc/productName": [
+          {
+            "@value": "123"
+          }
+        ],
         "@type": [
           "https://gs1.org/voc/Product"
         ]

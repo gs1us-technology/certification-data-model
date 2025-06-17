@@ -41,7 +41,8 @@
       },
       "https://gs1.org/voc/gtin": "00123456789128",
       "https://gs1.org/voc/productDescription": "Brand Product Description for Product ABC",
-      "https://gs1.org/voc/productID": "B07PGL2ZSL"
+      "https://gs1.org/voc/productID": "B07PGL2ZSL",
+      "https://gs1.org/voc/productName": "ABC"
     },
     {
       "@id": "https://id.gs1.org/01/00123456789129",
@@ -90,7 +91,8 @@
       ],
       "https://gs1.org/voc/gtin": "00123456789129",
       "https://gs1.org/voc/productDescription": "Brand Product Description for Product 123",
-      "https://gs1.org/voc/productID": "B08XYF2G5N"
+      "https://gs1.org/voc/productID": "B08XYF2G5N",
+      "https://gs1.org/voc/productName": "123"
     }
   ]
 }
