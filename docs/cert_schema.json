@@ -11,14 +11,14 @@
     "id": {
       "type": "string",
       "format": "uri",
-      "description": "Unique identifier, could be a URL"
+      "description": "Unique identifier, MUST URL"
     },
     "type": {
       "type": "string",
       "enum": [
         "CertificationReport"
       ],
-      "description": "Type of document"
+      "description": "Type of Object"
     },
     "issueDate": {
       "type": "string",
@@ -41,7 +41,8 @@
         {
           "$ref": "#/definitions/product"
         }
-      ]
+      ],
+      "description": "One or more product objects"
     }
   },
   "definitions": {
@@ -65,16 +66,24 @@
           "enum": [
             "Product"
           ],
-          "description": "Type of product"
+          "description": "Type of Object"
         },
         "gtin": {
           "type": "string",
           "pattern": "^[0-9]{14}$",
-          "description": "The 14-digit Global Trade Item Number"
+          "description": "A Global Trade Item Number (GTIN) is the 14 digit GS1 Identification Key used to identify products. The key comprises a GS1 Company Prefix followed by an Item Reference Number and a Check Digit. See https://www.gs1.org/gtin for more details."
         },
         "description": {
           "type": "string",
-          "description": "Description of the product"
+          "description": "An understandable and useable description of a product using brand and other descriptors. This attribute is filled with as little abbreviation as possible, while keeping to a reasonable length. This should be a meaningful description of the product with full spelling to facilitate message processing. Retailers can use this description as the base to fully understand the brand, flavour, scent etc. of the specific product, in order to accurately create a product description as needed for their internal systems. Examples: XYZ Brand Base Invisible Solid Deodorant AP Stick Spring Breeze."
+        },
+        "additionalTradeItemId" :{
+          "type": "string",
+          "description": "Additional means to the Global Trade Item Number to identify a product."
+        },
+        "name": {
+          "type": "string",
+          "name": "Consumer friendly short description of the product suitable for compact presentation."
         },
         "certificationInfo": {
           "oneOf": [
@@ -88,7 +97,8 @@
             {
               "$ref": "#/definitions/certificationInfo"
             }
-          ]
+          ],
+          "description": "One or more certification objects"
         }
       }
     },
@@ -102,22 +112,23 @@
         "standard",
         "status"
       ],
+
       "properties": {
         "id": {
           "type": "string",
           "format": "uri",
-          "description": "Unique identifier for the certification, could be a URL"
+          "description": "Unique identifier for the certification, MUST a URL"
         },
         "type": {
           "type": "string",
           "enum": [
             "CertificationDetails"
           ],
-          "description": "Type of certification information"
+          "description": "Type of object"
         },
         "agency": {
           "type": "string",
-          "description": "The agency responsible for the certification"
+          "description": "Name of the organisation issuing the certification standard or other requirement being met."
         },
         "program": {
           "type": "string",
@@ -126,7 +137,12 @@
         "endDate": {
           "type": "string",
           "format": "date",
-          "description": "End date of the certification"
+          "description": "Last date of validity for the certification. (After this date the certification lapses and would need to be renewed/replaced)."
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "First date of validity for the certification."
         },
         "standard": {
           "type": "string",
@@ -134,7 +150,7 @@
         },
         "certificateId" : {
           "type": "string",
-          "description": "A vendor Specific ceritficate ID."
+          "description": "A reference (i.e, to a certificate instance) issued to confirm that a product, party or location has passed certification. e.g. 'XSC-C-12345'"
         },
         "status": {
           "type": "string",
@@ -142,7 +158,7 @@
             "ACTIVE",
             "INACTIVE"
           ],
-          "description": "Status of the certification"
+          "description": "A set of codes for the status of a certification instance."
         },
         "value": {
           "type": "string",

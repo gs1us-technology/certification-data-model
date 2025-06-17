@@ -14,7 +14,7 @@
             "gtin": "00123456789128",
             "name": "ABC",
             "description": "Brand Product Description for Product ABC",
-            "additionalTradeItemIdentifier": "B07PGL2ZSL",
+            "additionalTradeItemId": "B07PGL2ZSL",
             "certificationInfo": {
                 "id": "http://www.example.com/certid=2342342",
                 "type": "CertificationDetails",
@@ -43,7 +43,7 @@
             "name": "123",
             "description": "Brand Product Description for Product 123",
             "gtin": "00123456789129",
-            "additionalTradeItemIdentifier": "B08XYF2G5N",
+            "additionalTradeItemId": "B08XYF2G5N",
             "certificationInfo":
             [
                 {
