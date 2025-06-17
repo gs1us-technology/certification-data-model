@@ -98,6 +98,7 @@
         "id",
         "type",
         "agency",
+        "program",
         "standard",
         "status"
       ],
