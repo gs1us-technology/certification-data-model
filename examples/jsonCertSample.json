@@ -12,6 +12,7 @@
             "id": "https://id.gs1.org/01/00123456789128",
             "type": "Product",
             "gtin": "00123456789128",
+            "name": "ABC",
             "description": "Brand Product Description for Product ABC",
             "additionalTradeItemIdentifier": "B07PGL2ZSL",
             "certificationInfo": {
@@ -39,6 +40,7 @@
         {
             "id": "https://id.gs1.org/01/00123456789129",
             "type": "Product",
+            "name": "123",
             "description": "Brand Product Description for Product 123",
             "gtin": "00123456789129",
             "additionalTradeItemIdentifier": "B08XYF2G5N",
