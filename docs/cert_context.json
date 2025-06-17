@@ -41,10 +41,15 @@
     "certificationInfo": {
       "@id": "gs1:certification"
     },
-
+    "agencyURL" : {
+      "@id": "gs1:certificationAgencyURL"
+    },
     "agency": "gs1:certificationAgency",
     "endDate": {
       "@id": "gs1:certificationEndDate"
+    },
+    "startDate": {
+      "@id": "gs1:certificationStartDate"
     },
     "standard": "gs1:certificationStandard",
 
