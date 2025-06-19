@@ -1,13 +1,12 @@
 {
-    "@context": "https://gs1us-technology.github.io/certification-data-model/cert_context.json",
     "$schema": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json",
-    "id": "https://tcocertified.com/reports/DC2F59AF-2B1D-7943-B911-69FF3CEBD711",
-    "issueDate": "2025-06-10",
+    "@context": "https://gs1us-technology.github.io/certification-data-model/cert_context.json",
+    "id": "urn:uuid:C49CD4D2-6AFB-7540-BA6E-30893989024E",
+    "issueDate": "2025-06-18",
     "issuer": "TCO Development",
     "products": [
         {
             "certificationInfo": {
-                "type": "CertificationDetails",
                 "agency": "TCO Development",
                 "agencyURL": "https://tcocertified.com/",
                 "certificateId": "N1024110004",
@@ -16,7 +15,8 @@
                 "program": "TCO Certified",
                 "standard": "TCO Certified, generation 10, for notebooks",
                 "startDate": "2024-12-04",
-                "status": "ACTIVE"
+                "status": "ACTIVE",
+                "type": "CertificationDetails"
             },
             "gtin": "06942292175384",
             "id": "https://id.gs1.org/01/06942292175384",
@@ -25,7 +25,6 @@
         },
         {
             "certificationInfo": {
-                "type": "CertificationDetails",
                 "agency": "TCO Development",
                 "agencyURL": "https://tcocertified.com/",
                 "certificateId": "N1024110004",
@@ -34,7 +33,8 @@
                 "program": "TCO Certified",
                 "standard": "TCO Certified, generation 10, for notebooks",
                 "startDate": "2024-12-04",
-                "status": "ACTIVE"
+                "status": "ACTIVE",
+                "type": "CertificationDetails"
             },
             "gtin": "00198155473487",
             "id": "https://id.gs1.org/01/00198155473487",
@@ -43,7 +43,6 @@
         },
         {
             "certificationInfo": {
-                "type": "CertificationDetails",
                 "agency": "TCO Development",
                 "agencyURL": "https://tcocertified.com/",
                 "certificateId": "N1024110004",
@@ -52,7 +51,8 @@
                 "program": "TCO Certified",
                 "standard": "TCO Certified, generation 10, for notebooks",
                 "startDate": "2024-12-04",
-                "status": "ACTIVE"
+                "status": "ACTIVE",
+                "type": "CertificationDetails"
             },
             "gtin": "00198155484704",
             "id": "https://id.gs1.org/01/00198155484704",
@@ -61,7 +61,6 @@
         },
         {
             "certificationInfo": {
-                "type": "CertificationDetails",
                 "agency": "TCO Development",
                 "agencyURL": "https://tcocertified.com/",
                 "certificateId": "N1024110004",
@@ -70,7 +69,8 @@
                 "program": "TCO Certified",
                 "standard": "TCO Certified, generation 10, for notebooks",
                 "startDate": "2024-12-04",
-                "status": "ACTIVE"
+                "status": "ACTIVE",
+                "type": "CertificationDetails"
             },
             "gtin": "00198155510700",
             "id": "https://id.gs1.org/01/00198155510700",
@@ -79,7 +79,6 @@
         },
         {
             "certificationInfo": {
-                "type": "CertificationDetails",
                 "agency": "TCO Development",
                 "agencyURL": "https://tcocertified.com/",
                 "certificateId": "N1024110004",
@@ -88,7 +87,8 @@
                 "program": "TCO Certified",
                 "standard": "TCO Certified, generation 10, for notebooks",
                 "startDate": "2024-12-04",
-                "status": "ACTIVE"
+                "status": "ACTIVE",
+                "type": "CertificationDetails"
             },
             "gtin": "00198155510717",
             "id": "https://id.gs1.org/01/00198155510717",
