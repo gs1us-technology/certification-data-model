@@ -48,6 +48,9 @@
     "endDate": {
       "@id": "gs1:certificationEndDate"
     },
+    "lastUpdateDate": {
+      "@id": "gs1x:lastUpdateDate"
+    },
     "startDate": {
       "@id": "gs1:certificationStartDate"
     },

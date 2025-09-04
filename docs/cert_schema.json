@@ -139,6 +139,11 @@
           "format": "date",
           "description": "Last date of validity for the certification. (After this date the certification lapses and would need to be renewed/replaced)."
         },
+        "lastUpdateDate": {
+          "type": "string",
+          "format": "date",
+          "description": "This date should reflect the last date when any property within the certificationDetails object has changed."
+        },
         "startDate": {
           "type": "string",
           "format": "date",
