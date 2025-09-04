@@ -17,36 +17,203 @@ its matching (no data lost).
 
 # Data Element Details
 
-| Header / Object | Add to web voc | Req/Cond/Opt | JSON Property Shorthand | JSON-LD Property Name | Data Type | Description | Example | Comments |
-|-----------------|----------------|--------------|--------------------------|-----------------------|-----------|-------------|---------|----------|
-| Header | X | 🟥 R | issueDate | [gs1:x/issueDate](https://gs1.org/voc/x/issueDate) | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | First date of validity for the certification | 2025-06-30 | |
-|  | X | 🟩 O | issuer | [gs1:x/issuer](https://gs1.org/voc/x/issuer) | [xsd:string](http://www.w3.org/2001/XMLSchema#string) | GLN or other identifier of document creator | "Certification Report Generator Entity" | |
-|  |  | 🟥 R | @context | `@context` | URI | Must point to the cert_context.json file | `"@context": "https://gs1us-technology.github.io/certification-data-model/cert_context.json"` | |
-|  |  | 🟥 R | $schema | N/A | URI | Must point to the schema for the JSON shorthand | `"$schema": "https://gs1us-technology.github.io/certification-data-model/cert_schema.json"` | |
-|  |  | 🟥 R | id | [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject) | URI | A globally unique URI describing this certification report | [Sample Report](https://gs1us-technology.github.io/examples/jsonCertSample.json) | |
-|  | X | 🟥 R | type | [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | N/A | MUST contain `"CertificationReport"` (see [gs1:x/CertificationReport](https://gs1.org/voc/x/CertificationReport)) | | |
-| Object |  | 🟥 R | products | [gs1:x/products](https://gs1.org/voc/x/products) | [Product](https://ref.gs1.org/voc/Product) | A list of one or more products | | |
-|  |  | 🟥 R | id | [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject) | URI | Unique GS1 Digital Link URI for product | `"https://id.gs1.org/01/00123456789128/10/ABCDBatch"` | |
-|  |  | 🟥 R | type | [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | N/A | MUST contain `"Product"` (see [gs1:Product](https://ref.gs1.org/voc/Product)) | | |
-|  |  | 🟥 R | gtin | [gs1:gtin](https://ref.gs1.org/voc/gtin) | [xsd:string](http://www.w3.org/2001/XMLSchema#string) | GTIN (14-digit GS1 Key) | 00123456789012 | |
-|  | X | 🟩 O | additionalTradeItemId | [gs1:x/productID](https://ref.gs1.org/voc/x/productID) | [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Product ID in addition to GTIN (ASIN, SKU, etc.) | "B07P54S890" | Mirrors `additionalOrganizationalID` |
-|  |  | 🟩 O | name | [gs1:productName](https://ref.gs1.org/voc/productName) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Short consumer-friendly product name | Short Receipt Desc ABC | |
-|  |  | 🟩 O | description | [gs1:productDescription](https://ref.gs1.org/voc/productDescription) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Brand/descriptive product text | Brand Product Description ABC | |
-| Object |  | 🟥 R | certificationInfo | [gs1:certification](https://ref.gs1.org/voc/certification) | [CertificationDetails](https://ref.gs1.org/voc/CertificationDetails) | Certification details for product/org/place | N/A | |
-|  |  | 🟥 R | id | [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject) | URI | Globally unique cert URI | [Example](http://www.example.com/certid=2342342) | |
-|  |  | 🟥 R | type | [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | N/A | MUST contain `"CertificationDetails"` (see [gs1:CertificationDetails](https://ref.gs1.org/voc/CertificationDetails)) | | |
-|  |  | 🟥 R | agency | [gs1:certificationAgency](https://ref.gs1.org/voc/certificationAgency) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Name of certifying organisation | "TCO Development" | |
-|  | X | 🟥 R | program | [gs1:x/certificationProgram](https://ref.gs1.org/voc/x/certificationProgram) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Certification program name | TCO Certified | |
-|  |  | 🟩 O | certificateId | [gs1:certificationIdentification](https://ref.gs1.org/voc/certificationIdentification) | [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Vendor-specific cert ID | AB1234567 | |
-|  |  | 🟩 O | endDate | [gs1:certificationEndDate](https://ref.gs1.org/voc/certificationEndDate) | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | Expiry date of cert | 2026-05-17 or null | |
-|  |  | 🟥 R | standard | [gs1:certificationStandard](https://ref.gs1.org/voc/certificationStandard) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Certification standard/version | "GRS 4.0" | Needs improved definition |
-|  |  | 🟥 R | status | [gs1:certificationStatus](https://ref.gs1.org/voc/certificationStatus) | [CertificationStatus](https://ref.gs1.org/voc/CertificationStatus) | Certification status (active/inactive) | ACTIVE | Align with endDate |
-|  |  | 🟩 O | level | [gs1:certificationValue](https://ref.gs1.org/voc/certificationValue) | [rdf:langString](http://www.w3.org/1999/02/22-rdf-syntax-ns#langString) | Cert level/tier | Silver | Rename `value` → `level` |
-|  |  | 🟩 O | agencyURL | https://ref.gs1.org/voc/certificationAgencyURL | [Organization](https://ref.gs1.org/voc/Organization) | URL of certifying agency | [TCO Certified](https://tcocertified.com/) | |
-|  |  | 🟩 O | auditDate | [gs1:certificationAuditDate](https://ref.gs1.org/voc/certificationAuditDate) | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | Audit completion date | 2026-05-17 | Not mapped in pilot |
-|  |  | 🟩 O | startDate | [gs1:certificationStartDate](https://ref.gs1.org/voc/certificationStartDate) | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | First validity date | 2026-05-17 | |
-|  |  | 🟩 O | certificationURI | [gs1:certificationURI](https://ref.gs1.org/voc/certificationURI) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) | Link to agency cert record | https://tcocertified.com/certID/abc780123 | Not mapped in pilot |
-|  |  | 🟩 O | initialCertificationDate | [gs1:initialCertificationDate](https://ref.gs1.org/voc/initialCertificationDate) | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | Original issue date | 2026-05-17 | Not mapped in pilot |
-| Object | X | 🟧 C | targetCountries | [gs1:x/certificationApplicableCountries](https://gs1.org/voc/x/certificationApplicableCountries) | [Country](https://ref.gs1.org/voc/Country) | Countries where certification applies | N/A | Issue #9 |
-|  |  | 🟥 R | countryCode | [gs1:countryCode](https://ref.gs1.org/voc/countryCode) | [xsd:string](http://www.w3.org/2001/XMLSchema#string) | ISO 3166-1 numeric code | "840" (US), "124" (CA) | |
-|  |  | 🟥 R | type | [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | N/A | MUST contain `"Country"` (see [gs1:Country](https://ref.gs1.org/voc/Country)) | | |
+<table style="width:100%; table-layout:fixed; border-collapse:collapse;" border="1">
+  <thead>
+    <tr>
+      <th style="width:8%;">Header / Object</th>
+      <th style="width:6%;">Add<br>to web voc</th>
+      <th style="width:8%;">Req/Cond/Opt</th>
+      <th style="width:12%;">JSON Property Shorthand</th>
+      <th style="width:16%;">JSON-LD Property Name</th>
+      <th style="width:12%;">Data Type</th>
+      <th style="width:18%;">Description</th>
+      <th style="width:12%;">Example</th>
+      <th style="width:8%;">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Header</td><td>X</td><td style="color:red;">R</td>
+      <td>issueDate</td><td><a href="https://gs1.org/voc/x/issueDate">gs1x:/issueDate</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+      <td>First date of validity for the certification</td><td>2025-06-30</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td>X</td><td style="color:green;">O</td>
+      <td>issuer</td><td><a href="https://gs1.org/voc/x/issuer">gs1x:/issuer</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+      <td>GLN or other identifier of document creator</td><td>"Certification Report Generator Entity"</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>@context</td><td>@context</td><td>URI</td>
+      <td>Must point to the cert_context.json file</td>
+      <td>@context: https://gs1us-technology.github.io/certification-data-model/cert_context.json</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>$schema</td><td>N/A</td><td>URI</td>
+      <td>Must point to the schema for the JSON shorthand</td>
+      <td>$schema: https://gs1us-technology.github.io/certification-data-model/cert_schema.json</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td><td>URI</td>
+      <td>Globally unique URI describing this certification report</td>
+      <td><a href="https://gs1us-technology.github.io/examples/jsonCertSample.json">Sample Report</a></td><td></td>
+    </tr>
+    <tr>
+      <td></td><td>X</td><td style="color:red;">R</td>
+      <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
+      <td>MUST be "CertificationReport"</td><td><a href="https://gs1.org/voc/x/CertificationReport">CertificationReport</a></td><td></td>
+    </tr>
+    <tr>
+      <td>Object</td><td></td><td style="color:red;">R</td>
+      <td>products</td><td><a href="https://gs1.org/voc/x/products">gs1x:/products</a></td>
+      <td><a href="https://ref.gs1.org/voc/Product">Product</a></td>
+      <td>A list of one or more products</td><td></td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td><td>URI</td>
+      <td>Unique GS1 Digital Link URI for product</td>
+      <td>https://id.gs1.org/01/00123456789128</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
+      <td>MUST be "Product"</td><td><a href="https://ref.gs1.org/voc/Product">Product</a></td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>gtin</td><td><a href="https://ref.gs1.org/voc/gtin">gs1:gtin</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+      <td>Global Trade Item Number (14-digit GS1 key)</td><td>00123456789012</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td>X</td><td style="color:green;">O</td>
+      <td>additionalTradeItemId</td><td><a href="https://ref.gs1.org/voc/x/productID">gs1x:/productID</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+      <td>Alternate product ID (ASIN, SKU, etc.)</td><td>"B07P54S890"</td><td>Future: align with additionalOrganizationalID</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>name</td><td><a href="https://ref.gs1.org/voc/productName">gs1:productName</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Consumer-friendly short description</td><td>Short Receipt Desc ABC</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>description</td><td><a href="https://ref.gs1.org/voc/productDescription">gs1:productDescription</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Brand / descriptive product text</td><td>Brand Product Description ABC</td><td></td>
+    </tr>
+    <tr>
+      <td>Object</td><td></td><td style="color:red;">R</td>
+      <td>certificationInfo</td><td><a href="https://ref.gs1.org/voc/certification">gs1:certification</a></td>
+      <td><a href="https://ref.gs1.org/voc/CertificationDetails">CertificationDetails</a></td>
+      <td>Certification information</td><td>N/A</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td>
+      <td>URI</td><td>Globally unique URI describing this certification</td>
+      <td>http://www.example.com/certid=2342342</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
+      <td>MUST be "CertificationDetails"</td><td><a href="https://ref.gs1.org/voc/CertificationDetails">CertificationDetails</a></td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>agency</td><td><a href="https://ref.gs1.org/voc/certificationAgency">gs1:certificationAgency</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Organisation issuing certification</td><td>"TCO Development"</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td>X</td><td style="color:red;">R</td>
+      <td>program</td><td><a href="https://ref.gs1.org/voc/x/certificationProgram">gs1x:/certificationProgram</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Certification program name</td><td>TCO Certified</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>certificateId</td><td><a href="https://ref.gs1.org/voc/certificationIdentification">gs1:certificationIdentification</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+      <td>Vendor-specific cert ID</td><td>AB1234567</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>endDate</td><td><a href="https://ref.gs1.org/voc/certificationEndDate">gs1:certificationEndDate</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+      <td>Last date of validity</td><td>2026-05-17</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>standard</td><td><a href="https://ref.gs1.org/voc/certificationStandard">gs1:certificationStandard</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Name/version of certification standard</td><td>TCO Certified, Gen 10</td><td>Improved definition requested</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>status</td><td><a href="https://ref.gs1.org/voc/certificationStatus">gs1:certificationStatus</a></td>
+      <td><a href="https://ref.gs1.org/voc/CertificationStatus">CertificationStatus</a></td>
+      <td>Status of certification</td><td>ACTIVE / INACTIVE</td><td>Align with endDate</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>level</td><td><a href="https://ref.gs1.org/voc/certificationValue">gs1:certificationValue</a></td>
+      <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
+      <td>Certification level/tier</td><td>Silver</td><td>Name change from 'value'</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>agencyURL</td><td><a href="https://ref.gs1.org/voc/certificationAgencyURL">gs1:certificationAgencyURL</a></td>
+      <td><a href="https://ref.gs1.org/voc/Organization">Organization</a></td>
+      <td>Certifying agency website</td><td>https://tcocertified.com</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>auditDate</td><td><a href="https://ref.gs1.org/voc/certificationAuditDate">gs1:certificationAuditDate</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+      <td>Date of audit completion</td><td>2026-05-17</td><td>Not mapped in pilot</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>startDate</td><td><a href="https://ref.gs1.org/voc/certificationStartDate">gs1:certificationStartDate</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+      <td>First validity date</td><td>2026-05-17</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>certificationURI</td><td><a href="https://ref.gs1.org/voc/certificationURI">gs1:certificationURI</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+      <td>Link to cert data in agency repo</td>
+      <td>https://tcocertified.com/certID/abc780123</td><td>Not mapped in pilot</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:green;">O</td>
+      <td>initialCertificationDate</td><td><a href="https://ref.gs1.org/voc/initialCertificationDate">gs1:initialCertificationDate</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+      <td>Original issue date</td><td>2026-05-17</td><td>Not mapped in pilot</td>
+    </tr>
+    <tr>
+      <td>Object</td><td>X</td><td style="color:orange;">C</td>
+      <td>targetCountries</td><td><a href="https://gs1.org/voc/x/certificationApplicableCountries">gs1x:/certificationApplicableCountries</a></td>
+      <td><a href="https://ref.gs1.org/voc/Country">Country</a></td>
+      <td>If certification applies to specific countries</td><td>N/A</td><td>Issue #9</td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>countryCode</td><td><a href="https://ref.gs1.org/voc/countryCode">gs1:countryCode</a></td>
+      <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+      <td>ISO 3166-1 numeric country code</td><td>840 (US), 124 (CA)</td><td></td>
+    </tr>
+    <tr>
+      <td></td><td></td><td style="color:red;">R</td>
+      <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
+      <td>MUST be "Country"</td><td><a href="https://ref.gs1.org/voc/Country">Country</a></td><td></td>
+    </tr>
+  </tbody>
+</table>
