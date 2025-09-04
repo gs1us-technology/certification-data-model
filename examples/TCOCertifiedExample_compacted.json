@@ -120,7 +120,8 @@
         "https://gs1.org/voc/x/certificationProgram": {
           "@type": "rdf:langString",
           "@value": "TCO Certified"
-        }
+        },
+        "https://gs1.org/voc/x/lastUpdateDate": "2025-06-09"
       },
       "https://gs1.org/voc/gtin": "00198155510717",
       "https://gs1.org/voc/productName": "ThinkBook 14 G8 IRL"
