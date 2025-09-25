@@ -44,6 +44,7 @@
       <thead>
         <tr>
           <th>Object / Property</th>
+          <th>Parent Class (if relevant)</th>
           <th>Add to <br>web voc</th>
           <th>Required<br>Conditional<br>Optional</th>
           <th>JSON Property Shorthand</th>
@@ -57,171 +58,200 @@
       <tbody>
         <tr>
           <td>Object</td><td>X</td><td style="color:red;">R</td>
+          <td>N/A</td>
           <td>(Document Root Object)</td><td>(Document Root Object)</a></td>
           <td><a href="https://gs1.org/voc/x/CertificationReport">CertificationReport</a></td>
           <td>This is the root object for the data model</td><td>N/A</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>issueDate</td><td><a href="https://gs1.org/voc/x/issueDate">gs1x:issueDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
-          <td>First date of validity for the certification</td><td>2025-06-30</td><td></td>
+          <td>The date this certification report was issued.</td><td>2025-06-30</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:green;">O</td>
+          <td>CertificationReport</td>
           <td>issuer</td><td><a href="https://gs1.org/voc/x/issuer">gs1x:issuer</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
           <td>GLN or other identifier of document creator</td><td>Certification Report Generator Entity</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>@context</td><td>@context</td><td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
           <td>Must point to the cert_context.json file</td>
           <td>@context: https://gs1us-technology.github.io/certification-data-model/cert_context.json</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>$schema</td><td>N/A</td><td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
           <td>Must point to the schema for the JSON shorthand</td>
           <td>$schema: https://gs1us-technology.github.io/certification-data-model/cert_schema.json</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td><td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
           <td>Globally unique URI describing this certification report</td>
           <td><a href="https://gs1us-technology.github.io/examples/jsonCertSample.json">Sample Report</a></td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
           <td>MUST be "CertificationReport"</td><td><a href="https://gs1.org/voc/x/CertificationReport">CertificationReport</a></td><td></td>
         </tr>
         <tr>
           <td>Object</td><td></td><td style="color:red;">R</td>
+          <td>CertificationReport</td>
           <td>products</td><td><a href="https://gs1.org/voc/x/products">gs1x:products</a></td>
           <td><a href="https://ref.gs1.org/voc/Product">Product</a></td>
           <td>A list of one or more products</td><td>N/A</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>Product</td>
           <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td><td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
           <td>Unique GS1 Digital Link URI for product</td>
           <td>https://id.gs1.org/01/00123456789128</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>Product</td>
           <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
           <td>MUST be "Product"</td><td><a href="https://ref.gs1.org/voc/Product">Product</a></td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>Product</td>
           <td>gtin</td><td><a href="https://ref.gs1.org/voc/gtin">gs1:gtin</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
           <td>Global Trade Item Number (14-digit GS1 key)</td><td>00123456789012</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:green;">O</td>
+          <td>Product</td>
           <td>additionalTradeItemId</td><td><a href="https://ref.gs1.org/voc/x/productID">gs1x:productID</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
           <td>Alternate product ID (ASIN, SKU, etc.)</td><td>B07P54S890</td><td>Future: align with additionalOrganizationalID</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>Product</td>
           <td>name</td><td><a href="https://ref.gs1.org/voc/productName">gs1:productName</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Consumer-friendly short description</td><td>Short Receipt Desc ABC</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>Product</td>
           <td>description</td><td><a href="https://ref.gs1.org/voc/productDescription">gs1:productDescription</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Brand / descriptive product text</td><td>Brand Product Description ABC</td><td></td>
         </tr>
         <tr>
           <td>Object</td><td></td><td style="color:red;">R</td>
+          <td>Product</td>
           <td>certificationInfo</td><td><a href="https://ref.gs1.org/voc/certification">gs1:certification</a></td>
           <td><a href="https://ref.gs1.org/voc/CertificationDetails">CertificationDetails</a></td>
           <td>Certification information</td><td>N/A</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>id</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">rdf:subject</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td><td>Globally unique URI describing this certification</td>
           <td>http://www.example.com/certid=2342342</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
           <td>MUST be "CertificationDetails"</td><td><a href="https://ref.gs1.org/voc/CertificationDetails">CertificationDetails</a></td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>agency</td><td><a href="https://ref.gs1.org/voc/certificationAgency">gs1:certificationAgency</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Organisation issuing certification</td><td>TCO Development</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>program</td><td><a href="https://ref.gs1.org/voc/x/certificationProgram">gs1x:certificationProgram</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Certification program name</td><td>TCO Certified</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>certificateId</td><td><a href="https://ref.gs1.org/voc/certificationIdentification">gs1:certificationIdentification</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
           <td>Vendor-specific cert ID</td><td>AB1234567</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td>X</td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>lastUpdateDate</td><td><a href="https://ref.gs1.org/voc/x/lastUpdateDate">gs1x:lastUpdateDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
           <td>Last date where any property of this certification information has changed</td><td>2025-04-23</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>endDate</td><td><a href="https://ref.gs1.org/voc/certificationEndDate">gs1:certificationEndDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
           <td>Last date of validity</td><td>2026-05-17</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>standard</td><td><a href="https://ref.gs1.org/voc/certificationStandard">gs1:certificationStandard</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Name/version of certification standard</td><td>TCO Certified, Gen 10</td><td>Improved definition requested</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>CertificationDetails</td>
           <td>status</td><td><a href="https://ref.gs1.org/voc/certificationStatus">gs1:certificationStatus</a></td>
           <td><a href="https://ref.gs1.org/voc/CertificationStatus">CertificationStatus</a></td>
           <td>Status of certification</td><td>ACTIVE / INACTIVE</td><td>Align with endDate</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>level</td><td><a href="https://ref.gs1.org/voc/certificationValue">gs1:certificationValue</a></td>
           <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a></td>
           <td>Certification level/tier</td><td>Silver</td><td>Name change from 'value'</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>agencyURL</td><td><a href="https://ref.gs1.org/voc/certificationAgencyURL">gs1:certificationAgencyURL</a></td>
           <td><a href="https://ref.gs1.org/voc/Organization">Organization</a></td>
           <td>Certifying agency website</td><td>https://tcocertified.com</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>auditDate</td><td><a href="https://ref.gs1.org/voc/certificationAuditDate">gs1:certificationAuditDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
           <td>Date of audit completion</td><td>2025-05-17</td><td>Not mapped in pilot</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>startDate</td><td><a href="https://ref.gs1.org/voc/certificationStartDate">gs1:certificationStartDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
           <td>First validity date</td><td>2024-05-17</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>certificationURI</td><td><a href="https://ref.gs1.org/voc/certificationURI">gs1:certificationURI</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
           <td>Link to cert data in agency repo</td>
@@ -229,24 +259,28 @@
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:green;">O</td>
+          <td>CertificationDetails</td>
           <td>initialCertificationDate</td><td><a href="https://ref.gs1.org/voc/initialCertificationDate">gs1:initialCertificationDate</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
           <td>Original issue date</td><td>2022-05-17</td><td>Not mapped in pilot</td>
         </tr>
         <tr>
           <td>Object</td><td>X</td><td style="color:orange;">C</td>
+          <td>CertificationDetails</td>
           <td>targetCountries</td><td><a href="https://gs1.org/voc/x/certificationApplicableCountries">gs1x:certificationApplicableCountries</a></td>
           <td><a href="https://ref.gs1.org/voc/Country">Country</a></td>
           <td>If certification applies to specific countries</td><td>N/A</td><td>Issue #9</td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>Country</td>
           <td>countryCode</td><td><a href="https://ref.gs1.org/voc/countryCode">gs1:countryCode</a></td>
           <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
           <td>ISO 3166-1 numeric country code</td><td>840 (US), 124 (CA)</td><td></td>
         </tr>
         <tr>
           <td>Property</td><td></td><td style="color:red;">R</td>
+          <td>Country</td>
           <td>type</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td><td>N/A</td>
           <td>MUST be "Country"</td><td><a href="https://ref.gs1.org/voc/Country">Country</a></td><td></td>
         </tr>
