@@ -48,11 +48,16 @@ classDiagram
       +type = "CertificationDetails"
       +agency: string
       +program: string
+      +certificateId: string
+      +lastUpdateDate: date
+      +endDate: date
       +standard: string
       +status: string
       +value: string
-      +certificateId: string
-      +endDate: date
+      +auditDate: date
+      +startDate: date
+      +certificationURI: URL
+      +initialCertificationDate: date
     }
 
     class Country {
