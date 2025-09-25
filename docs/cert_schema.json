@@ -170,7 +170,7 @@
           "description": "Certification value, e.g., gold, silver, tier2, tier1, etc."
         },
         "targetCountries": {
-          "description": "List of countries this certification applies. if absent, certification is not country specific.",
+          "description": "If the certification applies to specific countries, include a list of one or more Country objects. If certiciation is not country specific, this object MUST be omitted.",
           "oneOf": [
             {
               "type": "array",
