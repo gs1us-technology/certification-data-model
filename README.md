@@ -18,3 +18,49 @@ its matching (no data lost).
 # Data Element Details
 
 A table describing the data elements can be found [here](https://gs1us-technology.github.io/certification-data-model/data_details.html)
+
+# Data Hierarchy
+
+```mermaid
+classDiagram
+    direction LR
+
+    class CertificationReport {
+      +@context: URL
+      +$schema: URL
+      +id: URL
+      +type = "CertificationReport"
+      +issueDate: date
+      +issuer: string
+    }
+
+    class Product {
+      +id: URL
+      +type = "Product"
+      +gtin: string
+      +name: string
+      +description: string
+      +additionalTradeItemId: string
+    }
+
+    class CertificationDetails {
+      +id: URL
+      +type = "CertificationDetails"
+      +agency: string
+      +program: string
+      +standard: string
+      +status: string
+      +value: string
+      +certificateId: string
+      +endDate: date
+    }
+
+    class Country {
+      +type = "Country"
+      +countryCode: string
+    }
+
+    CertificationReport "1" o-- "1..*" Product : products
+    Product "1" o-- "1..*" CertificationDetails : certificationInfo
+    CertificationDetails "1" o-- "0..*" Country : targetCountries
+```
